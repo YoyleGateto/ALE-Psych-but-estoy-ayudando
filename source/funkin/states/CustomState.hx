@@ -41,9 +41,9 @@ class CustomState extends ScriptState
     {        
         super.create();
 
-        loadScript('scripts/states/' + scriptName, hsArguments, luaArguments);
-        
         loadScript('scripts/states/global', hsArguments, luaArguments);
+
+        loadScript('scripts/states/' + scriptName, hsArguments, luaArguments);
 
         for (map in [hsVariables, luaVariables])
             if (map != null)
