@@ -31,10 +31,10 @@ class CustomSubState extends ScriptSubState
     {        
         super.create();
 
-        loadScript('scripts/substates/' + scriptName, hsArguments, luaArguments);
-        
         loadScript('scripts/substates/global', hsArguments, luaArguments);
 
+        loadScript('scripts/substates/' + scriptName, hsArguments, luaArguments);
+        
         for (map in [hsVariables, luaVariables])
             if (map != null)
                 for (key in map.keys())
